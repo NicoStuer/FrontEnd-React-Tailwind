@@ -34,20 +34,14 @@ const Navbar = () => {
         </NavLink>
         <div className="flex space-x-4">
           <NavLink
-            to="/register"
-            isActive={() => location.pathname.includes("/register")}
+            to="/login"
+            isActive={() => location.pathname.includes("/login")}
           >
             Registro/Login
           </NavLink>
           <NavLink
-            to="/temporary-rentals"
-            isActive={() => location.pathname.includes("/temporary-rentals")}
-          >
-            Alquileres Temporales
-          </NavLink>
-          <NavLink
-            to="/permanent-rentals"
-            isActive={() => location.pathname.includes("/permanent-rentals")}
+            to="/rentals"
+            isActive={() => location.pathname.includes("/rentals")}
           >
             Alquileres
           </NavLink>

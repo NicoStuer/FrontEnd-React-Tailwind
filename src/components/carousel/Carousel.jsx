@@ -1,15 +1,12 @@
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "tailwindcss/tailwind.css";
+import { useContext} from "react";
+import { propertiesContext } from "../../context/propertiesContext"
 
 const CarouselComponent = () => {
-  const images = [
-    "/images/nature-house.jpg",
-    "/images/city-apartment.jpg",
-    "/images/family-house.jpg",
-    "/images/luxury-house.jpg",
-    "/images/relax-house.jpg",
-  ];
+
+  const properties = useContext(propertiesContext);
 
   return (
     <div className="w-full h-screen flex items-center justify-center">
@@ -20,10 +17,10 @@ const CarouselComponent = () => {
         autoPlay={true}
         interval={5000}
       >
-        {images.map((image, index) => (
+        {properties.map((property, index) => (
           <div key={index}>
             <img
-              src={image}
+              src={property.images}
               alt={`Image ${index}`}
               className="w-full h-screen object-cover"
             />
